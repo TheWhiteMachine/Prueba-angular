@@ -5,25 +5,29 @@
         <meta charset="utf-8">
         <title>Mi pagina de prueba</title>
         <script src="angular.min.js"></script>
+        <script src="codigo.js"></script>
+
     </head>
-    <body ng-app="appa" ng-cotroller="controlador">
+    <body ng-app="appa" ng-controller="controlador">
             <form>
                 <h1>Datos de su perro</h1>
                 <label for="nombre">Nombre</label>
                 <input ng-model="nombre" type="txt" id="nombre" value=""><br>
                 <label for="razas">Raza</label>
-                <select ng-model="razas" ></select>
-                <option ng-repeat="x in razas" ng-value="{{x}}">{{x} </option> </select>
+                <select ng-model="razaSeleccionada" >
+                <option ng-repeat="x in razas">
+                    {{x.raza}} 
+                </option> 
+            </select>
          
                
-                  
+            
             </form>
             <div>
-               <p>{{nombre}}+{{$razas}}</p> 
+               <pre>{{razaSeleccionada}}</pre> 
             </div>
 
-            
+
     </body>
-    <script src="codigo.js"></script>
 
 </html>

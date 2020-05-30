@@ -6,25 +6,43 @@
         <title>Mi pagina de prueba</title>
         <script src="angular.min.js"></script>
         <script src="codigo.js"></script>
+       
+        <link rel="stylesheet" type="text/css" href="estilo.css">
 
     </head>
     <body ng-app="appa" ng-controller="controlador">
-            <form>
+            <form class="formulario">
                 <h1>Datos de su perro</h1>
                 <label for="nombre">Nombre</label>
                 <input ng-model="nombre" type="txt" id="nombre" value=""><br>
                 <label for="razas">Raza</label>
                 <select ng-model="razaSeleccionada" >
-                <option ng-repeat="x in razas">
-                    {{x.raza}} 
-                </option> 
-            </select>
+                    <option ng-repeat="x in razas">
+                        {{x.raza}}
+                    </option>
+                </select>
+                <label for="patas">Cantidad de patas</label>
+                <select ng-model="patasSeleccionadas" >
+                    <option ng-repeat="x in patas">
+                        {{x}}
+                    </option>
+                </select> 
+          
          
                
             
             </form>
-            <div>
-               <pre>{{razaSeleccionada}}</pre> 
+            <div class="muestra">
+                <spam>{{nombre}} + {{razaSeleccionada}}</spam> 
+                <table ng-model="tabla">
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <tr ng-repeat="x in razas">
+                        <td> {{x.nombre}} </td>    
+                        <td> {{x.raza}} </td>
+                        <td><div ng-style="boton" ng-click="borra()"><p>Quitar</p></div></td>
+                    </tr>
+                </table>
             </div>
 
 

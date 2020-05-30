@@ -1,0 +1,36 @@
+.formulario{
+    background-color: cornsilk;
+    color: ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 30px;
+    
+}
+.muestra{
+    background-color: rgb(187, 181, 156);
+    margin-top: 10px;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: large;
+    padding: 30px;
+    width: 500px;
+    display: flex;
+    
+}
+.muestra th{
+    color: white;
+    font-weight: bold;
+    background-color: crimson;
+}
+.muestra tr{
+    color: black;
+    background-color: cornflowerblue;
+    font-weight: bold;
+
+
+    
+}
+.muestra td{
+    color: black;
+    margin-right: 10px;
+    
+}
